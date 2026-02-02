@@ -1,0 +1,15 @@
+// Last updated: 2/2/2026, 3:00:09 PM
+class Solution {
+    public int sumOfTheDigitsOfHarshadNumber(int x) {
+        int sum = 0;
+        int original = x;
+        while (x > 0) {
+            sum += x % 10;
+            x /= 10;
+        }
+        if (original % sum == 0) {
+            return sum;
+        }
+        return -1;
+    }
+}
